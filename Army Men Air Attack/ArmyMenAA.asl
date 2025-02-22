@@ -10,7 +10,7 @@ init
 	vars.Helper.Load = (Func<dynamic, bool>)(emu => 
 	{
 		emu.Make<int>("Start", 0x80eb1ec);
-		emu.Make<int>("MissionNo.", 0x80d0990);
+		emu.Make<int>("MissionNumber", 0x80d0990);
 		emu.Make<int>("MissionComplete", 0x80d7eb4);
 		
 		return true;
@@ -18,10 +18,11 @@ init
 
 }
 
-
 start
 {
-	return old.Start == 00 && current.Start == 01 && current.MissionNo == 00;
+	return old.Start == 00 && current.Start == 01 && current.MissionNumber == 00;
+
+    return true;
 }
 
 
