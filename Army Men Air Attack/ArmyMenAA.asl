@@ -20,14 +20,14 @@ init
 
 start
 {
-	return old.Start == 00 && current.Start == 01;
+	return old.Start == 0 && current.Start == 1;
 
     return true;
 }
 
 split
 {
-    return old.MissionComplete == 00 && current.MissionComplete == 01;
+    return old.MissionComplete == 0 && current.MissionComplete == 1;
 }
 
 /* Current Level State
