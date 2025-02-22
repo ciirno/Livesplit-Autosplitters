@@ -9,9 +9,9 @@ init
 {
 	vars.Helper.Load = (Func<dynamic, bool>)(emu => 
 	{
-		emu.Make<int>("Start", 0x000eb1ec);
-		emu.Make<int>("MissionNumber", 0x000d0990);
-		emu.Make<int>("MissionComplete", 0x000d7eb4);
+		emu.Make<int>("Start", 0x800eb1ec);
+		emu.Make<int>("MissionNumber", 0x800d0990);
+		emu.Make<int>("MissionComplete", 0x800d7eb4);
 		
 		return true;
 	});
